@@ -1,0 +1,450 @@
+$cor-fundo: #12002b;
+$cor-card: #5a2082;   
+$borda-pink: #ff007f;
+$letras-amerelas: #ffff00;
+$text-light: #ffffff; 
+$font-pixel: 'VT323', monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $cor-fundo;
+  color: $text-light;
+  font-family: $font-pixel;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 3px solid $borda-pink;
+
+  .logo {
+    height: 60px;
+    object-fit: contain;
+    border-radius: 60px;
+  }
+
+  nav {
+    display: flex;
+    gap: 25px;
+
+    a {
+      color: $letras-amerelas;
+      text-decoration: none;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: transform 0.2s, color 0.2s;
+
+      &:hover {
+        color: $borda-pink;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+//tela home
+.banner {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.jogos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  h2 {
+    color: $letras-amerelas;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    grid-column: 1 / -1;
+  }
+
+  .card {
+    background-color: $cor-card;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: $letras-amerelas;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $text-light;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      text-align: justify;
+    }
+  }
+}
+
+aside:not(.banner) {
+  background-color: $cor-card;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// Tela catalogo
+.filtros {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 25px;
+
+  button {
+    background-color: #3b0066;
+    color: $letras-amerelas;
+    font-family: $font-pixel;
+    font-size: 1.4rem;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &.active {
+      background-color: $borda-pink;
+      color: #ffffff;
+    }
+  }
+}
+
+.cardProd {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  .card-item {
+    background-color: $cor-card;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .img-box {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .info-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        color: $letras-amerelas;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .btn-carrinho {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $letras-amerelas;
+        font-size: 1.5rem;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.2);
+          color: $borda-pink;
+        }
+      }
+    }
+  }
+}
+
+//tela de cadastro
+.fraseTopo {
+  color: $letras-amerelas;
+  font-size: 2.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: $cor-card;
+  padding: 40px 50px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 850px;
+  margin: 0 auto;
+  width: 100%;
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      color: $letras-amerelas;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-family: $font-pixel;
+      font-size: 1.4rem;
+      outline: none;
+      background-color: #ffffff;
+      color: #333333;
+
+      &::placeholder {
+        color: #aaa;
+      }
+
+      &:focus {
+        box-shadow: 0 0 10px $borda-pink;
+      }
+    }
+  }
+
+  button {
+    align-self: center;
+    background-color: #00ffff;
+    color: #000000;
+    font-family: $font-pixel;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+
+    &:hover {
+      background-color: $borda-pink;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Imagem do Fantasminha flutuante
+.fantasminha {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -40px; 
+  padding-right: 20px;
+
+  img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+//tela pódio
+.podio-container {
+  background-color: $cor-card;
+  border-radius: 8px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .estrelinhas {
+    margin-bottom: 10px;
+
+    img {
+      height: 45px;
+      object-fit: contain;
+    }
+  }
+
+  .tabela-podio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .tabela-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      color: $letras-amerelas;
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .tabela-linha {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      .coluna-jogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 180px;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+
+        h3 {
+          color: $letras-amerelas;
+          font-size: 1.3rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .coluna-categoria {
+        color: $letras-amerelas;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .coluna-sobre {
+        p {
+          color: $letras-amerelas;
+          font-size: 1.2rem;
+          line-height: 1.2;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+//Footer
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 10px;
+
+  p {
+    color: #000000;
+    background-color: #e6e6e6;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+//Responsividade
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .jogos,
+  .cardProd {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fraseTopo {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 25px 20px;
+  }
+
+  .fantasminha {
+    justify-content: center;
+    margin-top: 10px;
+    padding-right: 0;
+  }
+
+  .podio-container {
+    padding: 20px 15px;
+
+    .tabela-podio {
+      .tabela-header {
+        display: none;
+      }
+
+      .tabela-linha {
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed $borda-pink;
+      }
+    }
+  }
+}

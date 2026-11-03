@@ -1,0 +1,76 @@
+{
+  "jogos": [
+    {
+      "id": 1,
+      "nome": "PAC MAN",
+      "categoria": "Arcade",
+      "imagem": "../imagens/jogos/pacman.png"
+    },
+    {
+      "id": 2,
+      "nome": "SPACE INVADERS",
+      "categoria": "Arcade",
+      "imagem": "../imagens/jogos/space.png"
+    },
+    {
+      "id": 3,
+      "nome": "GALAGA",
+      "categoria": "Arcade",
+      "imagem": "../imagens/jogos/galaga.png"
+    },
+    {
+      "id": 4,
+      "nome": "SUPER MARIO BROS",
+      "categoria": "Plataforma",
+      "imagem": "../imagens/jogos/marioBros.png"
+    },
+    {
+      "id": 5,
+      "nome": "SONIC THE HEDGEHOG 2",
+      "categoria": "Plataforma",
+      "imagem": "../imagens/jogos/sonic.png"
+    },
+    {
+      "id": 6,
+      "nome": "CASTLEVANIA",
+      "categoria": "Plataforma",
+      "imagem": "../imagens/jogos/castlevania.png"
+    },
+    {
+      "id": 7,
+      "nome": "THE LEGEND OF ZELDA",
+      "categoria": "RPG",
+      "imagem": "../imagens/jogos/zelda.jpg"
+    },
+    {
+      "id": 8,
+      "nome": "CHRONO TRIGGER",
+      "categoria": "RPG",
+      "imagem": "../imagens/jogos/chrono.jpg"
+    },
+    {
+      "id": 9,
+      "nome": "FINAL FANTASY VI",
+      "categoria": "RPG",
+      "imagem": "../imagens/jogos/fantasy.jpg"
+    },
+    {
+      "id": 10,
+      "nome": "STREET FIGHTER II",
+      "categoria": "Luta",
+      "imagem": "../imagens/jogos/streetFighters.jpg"
+    },
+    {
+      "id": 11,
+      "nome": "MORTAL KOMBAT II",
+      "categoria": "Luta",
+      "imagem": "../imagens/jogos/mortalKombat.jpg"
+    },
+    {
+      "id": 12,
+      "nome": "THE KING OF FIGHTERS '98",
+      "categoria": "Luta",
+      "imagem": "../imagens/jogos/kingFighters.jpg"
+    }
+  ]
+}
