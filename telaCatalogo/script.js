@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const containerCards = document.querySelector('.cardProd');
-  const botoesFiltro = document.querySelectorAll('.filtros button');
+  const containerCards = document.querySelector('.cardProd')
+  const botoesFiltro = document.querySelectorAll('.filtros button')
   let jogosData = [];
 
   fetch('../db.json')
     .then(response => response.json())
     .then(data => {
-      jogosData = data.jogos;
-      renderizarJogos(jogosData);
+      jogosData = data.jogos
+      renderizarJogos(jogosData)
     })
-    .catch(error => console.error('Erro ao carregar os dados:', error));
+    .catch(error => console.error('Erro ao carregar os dados:', error))
 
   function renderizarJogos(lista) {
-    containerCards.innerHTML = '';
+    containerCards.innerHTML = ''
 
     lista.forEach(jogo => {
-      const card = document.createElement('div');
-      card.classList.add('card-item');
+      const card = document.createElement('div')
+      card.classList.add('card-item')
 
       card.innerHTML = `
         <div class="img-box">
@@ -24,26 +24,41 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="info-box">
           <h3>${jogo.nome}</h3>
-          <button class="btn-carrinho" title="Adicionar ao carrinho">c</button>
+          <button class="btn-carrinho">
+            <img src="../imagens/carrinho.png" alt="Carrinho">
+          </button>
         </div>
-      `;
+      `
 
-      containerCards.appendChild(card);
-    });
+      containerCards.appendChild(card)
+    })
   }
 
   botoesFiltro.forEach(botao => {
     botao.addEventListener('click', () => {
-      const categoria = botao.textContent.trim();
+      const categoria = botao.textContent.trim()
 
-      botoesFiltro.forEach(btn => btn.classList.remove('active'));
-      botao.classList.add('active');
+      botoesFiltro.forEach(btn => btn.classList.remove('active'))
+      botao.classList.add('active')
 
       const jogosFiltrados = jogosData.filter(jogo => 
         jogo.categoria.toLowerCase() === categoria.toLowerCase()
-      );
+      )
 
-      renderizarJogos(jogosFiltrados);
-    });
-  });
-});
+      renderizarJogos(jogosFiltrados)
+    })
+  })
+})
+
+function adicionarAoCarrinho(botao) {
+  // 1. Exibe o alerta
+  alert("Item adicionado ao carrinho com sucesso!");
+
+  // 2. Adiciona a classe visual ao botão clicado
+  botao.classList.add("adicionado");
+
+  // 3. Remove a classe de destaque após 1.5 segundos
+  setTimeout(() => {
+    botao.classList.remove("adicionado");
+  }, 1500);
+}

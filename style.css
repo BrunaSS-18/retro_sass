@@ -100,7 +100,6 @@ header nav a:hover {
 }
 
 aside:not(.banner) {
-  background-color: #5a2082;
   border-radius: 8px;
   padding: 10px;
   overflow: hidden;
@@ -171,14 +170,7 @@ aside:not(.banner) img {
 .cardProd .card-item .info-box .btn-carrinho {
   background: none;
   border: none;
-  cursor: pointer;
-  color: #ffff00;
   font-size: 1.5rem;
-  transition: transform 0.2s;
-}
-.cardProd .card-item .info-box .btn-carrinho:hover {
-  transform: scale(1.2);
-  color: #ff007f;
 }
 
 .fraseTopo {

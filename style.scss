@@ -118,7 +118,6 @@ header {
 }
 
 aside:not(.banner) {
-  background-color: $cor-card;
   border-radius: 8px;
   padding: 10px;
   overflow: hidden;
@@ -197,15 +196,7 @@ aside:not(.banner) {
       .btn-carrinho {
         background: none;
         border: none;
-        cursor: pointer;
-        color: $letras-amerelas;
         font-size: 1.5rem;
-        transition: transform 0.2s;
-
-        &:hover {
-          transform: scale(1.2);
-          color: $borda-pink;
-        }
       }
     }
   }
@@ -291,7 +282,6 @@ form {
   }
 }
 
-// Imagem do Fantasminha flutuante
 .fantasminha {
   display: flex;
   justify-content: flex-end;
